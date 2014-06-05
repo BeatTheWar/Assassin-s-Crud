@@ -1,0 +1,101 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="jumbotron black">
+    <div class="row">
+        <div class="col-md-5 col-lg-5">  
+            <img src="img/iphones.png" class="jumbotron-img">
+        </div>
+        <div class="col-md-7 col-lg-7">
+            <h2 class="nova white lg margin-bottom-m">Assassin's CRUD</h2>
+            <p class="akkurat white sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quis accusantium exercitationem adipisci vitae eaque labore soluta cum. Nobis rem ipsam asperiores sunt excepturi tenetur vitae temporibus enim accusantium architecto.</p>
+            </p>
+            <div class="margin-bottom-m"></div>
+            <a class="btn btn-danger btn-lg btn-1" role="button">Get Started</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="well">
+        <form role="form">
+           <div class="form-group">
+              <label>Sort By:</label>
+              <select class="form-control" ng-model="orderProp">
+                 <option value="name">Name</option>
+                 <option value="age">Age</option>
+                 <option value="price">Price:Highest</option>
+                 <option value="-price">Price:Lowest</option>
+              </select>
+           </div>
+        </form>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row-fluid">
+          <div class="row margin-bottom-s">
+            <div class="col-md-3">
+                <div class="btn-group btn-group-justified">
+                  <div class="btn-group">
+                    <a role="button" class="btn btn-info btn-lg btn-3" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"><i class="glyphicon glyphicon-th"></i></a>
+                  </div>
+                  <div class="btn-group">
+                    <a role="button" class="btn btn-info btn-lg btn-3" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"><i class="glyphicon glyphicon-th-list"></i></a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-1 col-md-offset-8">
+               <a class="btn btn-danger btn-lg btn-2" role="button"><i class="glyphicon glyphicon-plus"></i></a>
+            </div>
+          </div>
+        
+          <div class="title-divider margin-bottom-m"></div>
+        
+          <!-- GridView -->
+
+          <div ng-show="layout == 'grid'" class="view-frame">
+          <div ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+            <div class="col-md-4 box-container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <a href="#/home/{{phone.id}}" class="thumb"><img class="product-img" ng-src="{{phone.imageUrl}}"></a>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="baron product-title">{{phone.name}}</p>
+                        <p class="akkurat product-price">{{phone.price}}</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- ListView -->
+
+          <div ng-show="layout == 'list'" class="view-frame">
+          <div ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+            <div class="col box-container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#/home/{{phone.id}}" class="thumb"><img class="product-img" ng-src="{{phone.imageUrl}}"></a>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="baron product-title">{{phone.name}}</p>
+                        <p class="akkurat product-price">{{phone.price}}</p>
+
+                        <h3 class="akkurat">Description:</h3>
+                        <p class="akkurat product-description" ng-repeat="snippet in phone.snippet">{{snippet}}</p>
+                    </div>
+                    <div class="col-md-1 col-md-offset-2">
+                        <p><a class="btn btn-danger btn-lg btn-4" role="button"><i class="glyphicon glyphicon-remove"></i></a></p>
+                        <p><a class="btn btn-danger btn-lg btn-4" role="button"><i class="glyphicon glyphicon-pencil"></i></a></p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          </div>
+      </div>
+    </div>
+</div>

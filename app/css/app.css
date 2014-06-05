@@ -1,0 +1,72 @@
+@font-face
+{
+font-family: Nova;
+src: url('../fonts/NOVABOLD.otf');
+}
+
+@font-face
+{
+font-family: Akkurat;
+src: url('../fonts/Akkurat-Light.ttf');
+}
+
+@font-face
+{
+font-family: Baron;
+src: url('../fonts/Baron.otf');
+}
+
+body {background:#f4f4f4!important;}
+a, a:hover {text-decoration: none; -webkit-transition: all .3s ease-in-out;}
+
+.nova {font-family: Nova; }
+.akkurat {font-family: Akkurat;}
+.baron {font-family: Baron;}
+
+.black {background-image: url(../img/blur.jpg)!important; background-size: 100%;}
+.black-2 {background-image: url(../img/blur-sm.jpg)!important; background-size: 100%;}
+
+.margin-bottom-s {margin-bottom:20px;}
+.margin-bottom-m {margin-bottom:50px;}
+.margin-bottom-lg {margin-bottom:100px;}
+
+.jumbotron.black {background:#363638;}
+.white {color:#f6f6f6 !important;}
+.white.sm {font-size: 1.4em; line-height: 140%;}
+.white.lg {font-size: 7em; line-height: 80%;}
+
+.btn.btn-1 {border-radius:0; border-color:#fff; background:none; -webkit-transition: all .3s ease-in-out;}
+.btn.btn-1:hover {color: #fff; border-color:#1be4b7; background:#1be4b7;}
+.btn.btn-1:active {color: #fff; border-color:#1be4b7; background:#1be4b7;}
+
+.btn.btn-2 {border-radius:0; border-color:#12C0D8; background:#12C0D8; -webkit-transition: all .3s ease-in-out;}
+.btn.btn-2:hover {color: #fff; border-color:#0ad1ed; background:#0ad1ed;}
+.btn.btn-2:active {color: #fff; border-color:#13acc1; background:#13acc1;}
+
+.btn.btn-3 {border-radius:0; border-color:#1be4b7; background:#1be4b7; -webkit-transition: all .3s ease-in-out;}
+.btn.btn-info.btn-3:hover {color: #fff; border-color:#09f6c1; background:#09f6c1;}
+.btn.btn-info.btn-3:active {color: #fff; border-color:#00cd9f; background:#00cd9f;}
+.btn-info.active {color: #fff; border-color:#00BE94!important; background:#00BE94!important;}
+
+.btn.btn-4 {border-radius:0; border-color:#fff; background:none; -webkit-transition: all .3s ease-in-out;}
+.btn.btn-4:hover {color: #29e6b3; border-color:#fbfbfb; background:#fbfbfb;}
+.btn.btn-4:active {color: #29e6b3; border-color:#fbfbfb; background:#fbfbfb;}
+
+.navbar.navbar-transparent {background:rgba(0,0,0,0.5); border-bottom: none;}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover {background: #D64B4B!important;}
+
+.product-img {width:170px; height:auto;}
+.brand-img {width:30px; height:auto; position:relative; left: 10px; top:-10px;}
+
+.box-container {padding:15px; border: solid #dfdfdf 1px; margin-bottom:25px; margin-left:-1px; -webkit-transition: all .3s ease-in-out;}
+.box-container:hover {background:#29e6b3; color: #fff; border:solid #29e6b3 1px;}
+.box-container:hover a {color:#fff;}
+
+.product-title {font-size:1.8em; text-decoration: none; line-height: 80%}
+.product-price {font-size:4em; position: relative; top:-10px;}
+.product-price:before {content: '$'; font-size: 0.4em; position: relative; top:-23px; right:-1px;}
+.product-description {font-size:1.1em; text-decoration: none; line-height: 180%;}
+
+.title-divider {border-bottom: 1px dashed #adadad;}
+
+.jumbotron-img {width:90%; height:auto; position:relative; top:25px; left:50px;}
